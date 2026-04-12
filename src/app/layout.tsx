@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Xratch | We Build. We Xratch. We Deliver.",
+  title: "Xratch | for website. From you. By you.",
   description: "Xratch is a premium creative and tech partner for ambitious clients.",
   manifest: "/manifest.json",
   icons: {
