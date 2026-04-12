@@ -17,7 +17,6 @@ export default function ContactForm() {
     phone: "",
     help: "",
     message: "",
-    budget: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -58,7 +57,6 @@ export default function ContactForm() {
           Company: formData.company,
           Phone: formData.phone || "Not provided",
           "Help With": formData.help,
-          Budget: formData.budget || "Not provided",
           Message: formData.message,
           _subject: `NewClient: ${formData.name} - ${formData.company}`
         }),
@@ -198,23 +196,7 @@ export default function ContactForm() {
                 ></motion.textarea>
               </div>
 
-              {/* Budget */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-white/80">Budget range</label>
-                <select
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-colors appearance-none"
-                >
-                  <option value="" disabled className="bg-black text-white/50">Select a budget</option>
-                  <option value="Under ₹1L" className="bg-[#0c0c0c]">Under ₹1L</option>
-                  <option value="₹1L–5L" className="bg-[#0c0c0c]">₹1L–5L</option>
-                  <option value="₹5L–20L" className="bg-[#0c0c0c]">₹5L–20L</option>
-                  <option value="₹20L+" className="bg-[#0c0c0c]">₹20L+</option>
-                  <option value="Let's discuss" className="bg-[#0c0c0c]">Let's discuss</option>
-                </select>
-              </div>
+
 
               <button
                 type="submit"
@@ -247,7 +229,7 @@ export default function ContactForm() {
               <button
                 onClick={() => {
                   setStatus("idle")
-                  setFormData({name: "", company: "", email: "", phone: "", help: "", message: "", budget: ""})
+                  setFormData({name: "", company: "", email: "", phone: "", help: "", message: ""})
                 }}
                 className="mt-12 text-sm text-white/40 hover:text-white transition-colors underline underline-offset-4"
               >
