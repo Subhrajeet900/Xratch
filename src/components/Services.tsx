@@ -36,6 +36,10 @@ export default function Services() {
       stickyChildren={false}
     >
       <div className="pointer-events-none absolute inset-0 bg-black/70 ring-1 ring-black/30" />
+      
+      {/* Top fade to blend with the previous section */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-black via-black/60 to-transparent z-20" />
+
       <div className="absolute inset-x-0 bottom-0 top-[150vh] flex flex-col justify-end pb-12 pt-20 bg-gradient-to-t from-black via-black/80 to-transparent">
         <section id="work" className="relative z-10 w-full mt-auto mb-10 overflow-hidden">
           <div className="w-full px-4 md:px-8 lg:px-12">

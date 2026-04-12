@@ -71,6 +71,9 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
         >
             <div className="pointer-events-none absolute inset-0 ring-1 ring-black/30 bg-black/70" />
 
+            {/* Bottom fade to blend with the next section */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/50 to-transparent z-20" />
+
             <div className="absolute inset-0 w-full h-full flex flex-col justify-center">
 
                 {/* We hide this header because standard Navbar is already being used in page.tsx for global navigation, 
