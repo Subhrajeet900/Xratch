@@ -1,23 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Outfit, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const outfit = Outfit({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
-const syne = Syne({
+const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#DEDAD4",
 };
 
 export const metadata: Metadata = {
-  title: "Xratch | for website. From you. By you.",
+  title: "Xratch – Build Beautifully",
   description: "Xratch is a premium creative and tech partner for ambitious clients.",
   manifest: "/manifest.json",
   icons: {
@@ -34,10 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${inter.variable} ${syne.variable} h-full antialiased`}
-      style={{ colorScheme: 'dark' }}
+      className={`${outfit.variable} ${cormorantGaramond.variable}`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+      <body>
         {children}
       </body>
     </html>

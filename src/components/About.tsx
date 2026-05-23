@@ -68,10 +68,10 @@ export default function About() {
             className="w-full lg:w-1/2 flex flex-col gap-6"
           >
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-sans">
-              Xratch isn't just an agency. We are a collective of designers, engineers, and strategists obsessed with the bleeding edge of the digital frontier.
+              Xratch isn&apos;t just an agency. We are a collective of designers, engineers, and strategists obsessed with the bleeding edge of the digital frontier.
             </p>
             <p className="text-lg text-white/50 leading-relaxed font-sans">
-              We partner with visionary brands to architect experiences that disrupt complacency. If you are looking for safe, ordinary, or standard—you're in the wrong place. We build to dominate.
+              We partner with visionary brands to architect experiences that disrupt complacency. If you are looking for safe, ordinary, or standard—you&apos;re in the wrong place. We build to dominate.
             </p>
           </motion.div>
         </div>

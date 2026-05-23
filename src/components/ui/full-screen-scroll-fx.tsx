@@ -103,7 +103,6 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
 
       durations = { change: 0.7, snap: 800 },
       reduceMotion,
-      smoothScroll = false, // enable if you install Lenis
 
       bgTransition = "fade",
       parallaxAmount = 4,
@@ -438,21 +437,21 @@ export const FullScreenScrollFX = forwardRef<HTMLDivElement, FullScreenFXProps>(
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const cssVars: CSSProperties = {
-      ["--fx-font" as any]: fontFamily,
-      ["--fx-text" as any]: colors.text ?? "rgba(245,245,245,0.92)",
-      ["--fx-overlay" as any]: colors.overlay ?? "rgba(0,0,0,0.35)",
-      ["--fx-page-bg" as any]: colors.pageBg ?? "#09090b",
-      ["--fx-stage-bg" as any]: colors.stageBg ?? "#09090b",
-      ["--fx-gap" as any]: `${gap}rem`,
-      ["--fx-grid-px" as any]: `${gridPaddingX}rem`,
-      ["--fx-row-gap" as any]: "10px",
-    };
+    const cssVars = {
+      "--fx-font": fontFamily,
+      "--fx-text": colors.text ?? "rgba(245,245,245,0.92)",
+      "--fx-overlay": colors.overlay ?? "rgba(0,0,0,0.35)",
+      "--fx-page-bg": colors.pageBg ?? "#09090b",
+      "--fx-stage-bg": colors.stageBg ?? "#09090b",
+      "--fx-gap": `${gap}rem`,
+      "--fx-grid-px": `${gridPaddingX}rem`,
+      "--fx-row-gap": "10px",
+    } as CSSProperties;
 
     return (
       <div
         ref={(node) => {
-          (rootRef as any).current = node;
+          rootRef.current = node;
           if (typeof ref === "function") ref(node);
           else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
         }}

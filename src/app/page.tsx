@@ -1,19 +1,25 @@
-import Navbar from "@/components/Navbar";
-import ResponsiveHeroBanner from "@/components/ui/responsive-hero-banner";
-import Services from "@/components/Services";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
-
-
+import XratchFooter from "../components/XratchFooter";
+import XratchContact from "../components/XratchContact";
+import XratchTestimonials from "../components/XratchTestimonials";
+import XratchProcess from "../components/XratchProcess";
+import XratchAbout from "../components/XratchAbout";
+import XratchServices from "../components/XratchServices";
+import XratchMarquee from "../components/XratchMarquee";
+import XratchHero from "../components/XratchHero";
+import XratchNavbar from "../components/XratchNavbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white font-sans flex flex-col">
-      <Navbar />
-      <ResponsiveHeroBanner />
-      <Services />
-      <ContactForm />
-      <Footer />
+    <main>
+      <XratchNavbar />
+      <XratchHero />
+      <XratchMarquee />
+      <XratchServices />
+      <XratchAbout />
+      <XratchProcess />
+      <XratchTestimonials />
+      <XratchContact />
+      <XratchFooter />
     </main>
   );
 }

@@ -40,7 +40,7 @@ export default function Navbar() {
             href="#connect"
             className="group relative px-5 py-2.5 text-sm font-medium border border-accent text-accent overflow-hidden rounded-full transition-transform hover:scale-105"
           >
-            <span className="relative z-10 group-hover:text-black transition-colors duration-300">Let's Connect</span>
+            <span className="relative z-10 group-hover:text-black transition-colors duration-300">Let&apos;s Connect</span>
             <div className="absolute inset-0 bg-accent transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out z-0"></div>
           </Link>
         </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-lg border-b border-white/10 flex flex-col px-6 py-6 gap-6">
           <Link href="#work" onClick={toggleMenu} className="text-xl font-medium tracking-tight">Work</Link>
-          <Link href="#connect" onClick={toggleMenu} className="text-xl font-medium tracking-tight text-accent">Let's Connect</Link>
+          <Link href="#connect" onClick={toggleMenu} className="text-xl font-medium tracking-tight text-accent">Let&apos;s Connect</Link>
         </div>
       )}
     </motion.nav>

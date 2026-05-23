@@ -45,7 +45,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/xratch.app@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/xratch.admin@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,10 +83,10 @@ export default function ContactForm() {
           titleComponent={
             <>
               <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-white">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-xl text-white/60 mb-8">
-                Tell us about your project and we'll get back to you within 24 hours.
+                Tell us about your project and we&apos;ll get back to you within 24 hours.
               </p>
             </>
           }
@@ -177,6 +177,7 @@ export default function ContactForm() {
                   <option value="Website" className="bg-[#0c0c0c]">Website</option>
                   <option value="Digital Product" className="bg-[#0c0c0c]">Digital Product</option>
                   <option value="Marketing" className="bg-[#0c0c0c]">Marketing</option>
+                  <option value="Documentation" className="bg-[#0c0c0c]">Documentation</option>
                   <option value="Something else" className="bg-[#0c0c0c]">Something else</option>
                 </motion.select>
               </div>
@@ -222,7 +223,7 @@ export default function ContactForm() {
               <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mb-8">
                 <CheckCircle2 size={48} className="text-accent" />
               </div>
-              <h3 className="font-heading text-4xl font-bold mb-4">We've got your message.</h3>
+              <h3 className="font-heading text-4xl font-bold mb-4">We&apos;ve got your message.</h3>
               <p className="text-xl text-white/60 max-w-md mx-auto">
                 Our team will reach out within 24 hours. Keep building.
               </p>
