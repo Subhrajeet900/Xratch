@@ -4,14 +4,14 @@
   "description": "We Build. We Xratch. We Deliver.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ADFF2F",
+  "background_color": "#0F0E0C",
+  "theme_color": "#C4A96A",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/logo.png",
-      "sizes": "192x192 512x512",
-      "type": "image/png",
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ]

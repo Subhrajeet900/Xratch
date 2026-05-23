@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Xratch – Logo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:#D0CBC3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    font-family:'Cormorant Garamond',serif;
+  }
+
+  .logo-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+  }
+
+  /* ── The Icon ── */
+  .icon{
+    width:180px;
+    height:180px;
+    background:#0F0E0C;
+    border-radius:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:
+      0 2px 0 rgba(255,255,255,0.04) inset,
+      0 -2px 0 rgba(0,0,0,0.4) inset,
+      0 24px 60px rgba(0,0,0,0.45),
+      0 8px 24px rgba(0,0,0,0.3);
+    animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  /* subtle inner gloss top edge */
+  .icon::before{
+    content:'';
+    position:absolute;
+    top:0;left:16px;right:16px;
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);
+    border-radius:0 0 2px 2px;
+  }
+
+  .icon-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:88px;
+    font-weight:400;
+    font-style:italic;
+    color:#C4A96A;
+    letter-spacing:-0.04em;
+    line-height:1;
+    /* optical vertical centering */
+    transform:translateY(4px);
+    user-select:none;
+  }
+
+  /* ── Wordmark below icon ── */
+  .wordmark{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    animation: fadeUp 0.9s 0.15s cubic-bezier(0.16,1,0.3,1) both;
+    opacity:0;
+  }
+
+  .wordmark-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;
+    font-weight:400;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:#1A1714;
+  }
+
+  .wordmark-name span{
+    color:#C4A96A;
+  }
+
+  .wordmark-divider{
+    width:32px;
+    height:1px;
+    background:rgba(196,169,106,0.45);
+  }
+
+  .wordmark-tag{
+    font-family:'Cormorant Garamond',serif;
+    font-size:12px;
+    font-weight:400;
+    font-style:italic;
+    letter-spacing:0.18em;
+    color:rgba(26,23,20,0.45);
+    text-transform:none;
+  }
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(18px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* ── Size variants row ── */
+  .variants{
+    display:flex;
+    align-items:flex-end;
+    gap:28px;
+    animation: fadeUp 0.9s 0.28s cubic-bezier(0.16,1,0.3,1) both;
+    opacity:0;
+  }
+
+  .v-icon{
+    background:#0F0E0C;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    position:relative;
+    box-shadow:0 8px 24px rgba(0,0,0,0.3);
+  }
+  .v-icon::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    border:1px solid rgba(255,255,255,0.05);
+  }
+
+  .v1{width:80px;height:80px;border-radius:18px}
+  .v2{width:56px;height:56px;border-radius:13px}
+  .v3{width:40px;height:40px;border-radius:9px}
+  .v4{width:28px;height:28px;border-radius:6px}
+
+  .v-text{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:400;
+    color:#C4A96A;
+    user-select:none;
+    line-height:1;
+  }
+  .v1 .v-text{font-size:38px;transform:translateY(2px)}
+  .v2 .v-text{font-size:27px;transform:translateY(1px)}
+  .v3 .v-text{font-size:19px;transform:translateY(1px)}
+  .v4 .v-text{font-size:13px}
+
+</style>
+</head>
+<body>
+
+<div class="logo-wrap">
+
+  <!-- Primary Icon -->
+  <div class="icon">
+    <span class="icon-text">Xr</span>
+  </div>
+
+  <!-- Wordmark -->
+  <div class="wordmark">
+    <div class="wordmark-name">Xr<span>a</span>tch</div>
+    <div class="wordmark-divider"></div>
+    <div class="wordmark-tag">Digital Craft Studio</div>
+  </div>
+
+  <!-- Size Scale -->
+  <div class="variants">
+    <div class="v-icon v1"><span class="v-text">Xr</span></div>
+    <div class="v-icon v2"><span class="v-text">Xr</span></div>
+    <div class="v-icon v3"><span class="v-text">Xr</span></div>
+    <div class="v-icon v4"><span class="v-text">Xr</span></div>
+  </div>
+
+</div>
+
+</body>
+</html>
