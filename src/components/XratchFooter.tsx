@@ -25,9 +25,7 @@ export default function XratchFooter() {
         </div>
         <div className="footer-col">
           <h5>Connect</h5>
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Behance</a>
+          <a href="https://www.linkedin.com/company/xratch/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       <div className="footer-bottom">

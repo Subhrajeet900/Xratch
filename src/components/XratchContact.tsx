@@ -216,10 +216,10 @@ export default function XratchContact() {
                     onChange={handleInputChange}
                   >
                     <option value="">Select a range…</option>
-                    <option>Under $1,000</option>
-                    <option>$1,000 – $3,000</option>
-                    <option>$3,000 – $10,000</option>
-                    <option>$10,000+</option>
+                    <option>$250 – $500</option>
+                    <option>$500 – $800</option>
+                    <option>$800 – $1,000</option>
+                    <option>$1,000+</option>
                     <option>Not sure yet</option>
                   </select>
                 </div>
